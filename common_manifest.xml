@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+          
+        <remote name="dblenk9"
+                fetch="https://github.com" />
+        <remote name="scnprh"
+                fetch="https://gitlab.com" />
+        <remote name="vendor-common"
+                fetch="https://gitlab.pixelexperience.org/android/vendor-blobs" />
+
+  <!-- < Override > -->
+  <remove-project name="LineageOS/android_hardware_qcom-caf_common" />
+
+  <!-- Trees -->
+  <project path="device/xiaomi/mojito" name="clo-project-mojito/device_xiaomi_mojito" remote="dblenk9" revision="13" />
+  <project path="vendor/xiaomi/mojito" name="clo-project-mojito/vendor_xiaomi_mojito" remote="dblenk9" revision="topaz" />
+  <project path="kernel/xiaomi/mojito" name="fiqri19102002/android_kernel_xiaomi_mojito" remote="dblenk9" revision="inline-rom" />
+  <project path="hardware/xiaomi" name="dblenk-project/hardware_xiaomi" remote="dblenk9" revision="lineage-20" />
+
+  <!-- < HALs QCOM CAF Common > -->
+  <project path="hardware/qcom-caf/common" name="LineageOS/android_hardware_qcom-caf_common" groups="qcom" >
+    <!-- add guard for AOSP hardware/qcom dir -->
+    <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+    <!-- add guards for CAF repositories -->
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8150-common/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150-common/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/bengal/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/bengal/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="vendor/nxp/opensource/pn5xx/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/pn5xx/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="vendor/nxp/opensource/sn100x/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/sn100x/Android.mk" />
+  <project path="hardware/qcom-caf/sm8150-common/audio" name="PixelExperience/hardware_qcom-caf_sm8150-common_audio" remote="dblenk9" />
+  <project path="hardware/qcom-caf/sm8150-common/display" name="PixelExperience/hardware_qcom-caf_sm8150-common_display" remote="dblenk9" />
+  <project path="hardware/qcom-caf/sm8150-common/gps" name="PixelExperience/hardware_qcom-caf_sm8150-common_gps" remote="dblenk9" />
+  <project path="hardware/qcom-caf/sm8150-common/media" name="PixelExperience/hardware_qcom-caf_sm8150-common_media" remote="dblenk9" />
+
+  <!-- < QCOM Common > -->
+  <project path="device/qcom/common" name="PixelExperience-Devices/device_qcom_common" remote="dblenk9" revision="thirteen" />
+  <project path="device/qcom/common-sepolicy" name="PixelExperience-Devices/device_qcom_common-sepolicy" remote="dblenk9" revision="thirteen" />
+  <project path="device/qcom/qssi" name="PixelExperience-Devices/device_qcom_qssi" remote="dblenk9" revision="thirteen" />
+  <project path="device/qcom/vendor-common" name="PixelExperience-Devices/device_qcom_vendor-common" remote="dblenk9" revision="thirteen" />
+  <project path="device/qcom/wlan" name="PixelExperience-Devices/device_qcom_wlan" remote="dblenk9" revision="thirteen" />
+  <project path="vendor/qcom/opensource/commonsys-intf/bluetooth" name="PixelExperience/vendor_qcom_opensource_commonsys-intf_bluetooth" remote="dblenk9" revision="thirteen" />
+  <project path="vendor/qcom/opensource/core-utils" name="PixelExperience/vendor_qcom_opensource_core-utils" remote="dblenk9" revision="thirteen" />
+  <project path="vendor/qcom/opensource/commonsys/dpm" name="PixelExperience/vendor_qcom_opensource_commonsys_dpm" remote="dblenk9" revision="thirteen" />
+  <project path="vendor/qcom/common" name="vendor_qcom_common" remote="vendor-common" revision="thirteen" />
+
+  <!-- Prebuilt Clang -->
+  <project path="prebuilts/clang/host/linux-x86/clang-aosp" name="anandhan07/aosp-clang" remote="scnprh" revision="17" clone-depth="1" />
+  <project path="prebuilts/clang/host/linux-x86/clang-r450784d" name="anandhan07/aosp-clang" remote="scnprh" revision="14" clone-depth="1" />
+
+</manifest>
