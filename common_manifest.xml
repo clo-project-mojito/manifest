@@ -36,7 +36,7 @@
   <project path="hardware/qcom-caf/sm8150-common/media" name="PixelExperience/hardware_qcom-caf_sm8150-common_media" remote="dblenk9" />
 
   <!-- < QCOM Common > -->
-  <project path="device/qcom/common" name="PixelExperience-Devices/device_qcom_common" remote="dblenk9" revision="thirteen" />
+  <project path="device/qcom/common" name="clo-project-mojito/device_qcom_common" remote="dblenk9" revision="lineage-20" />
   <project path="device/qcom/common-sepolicy" name="PixelExperience-Devices/device_qcom_common-sepolicy" remote="dblenk9" revision="thirteen" />
   <project path="device/qcom/qssi" name="PixelExperience-Devices/device_qcom_qssi" remote="dblenk9" revision="thirteen" />
   <project path="device/qcom/vendor-common" name="PixelExperience-Devices/device_qcom_vendor-common" remote="dblenk9" revision="thirteen" />
