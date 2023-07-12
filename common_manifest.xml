@@ -32,10 +32,10 @@
     <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/sn100x/Android.mk" />
   </project>
 
-  <project path="hardware/qcom-caf/sm8150-common/audio" name="PixelExperience/hardware_qcom-caf_sm8150-common_audio" remote="dblenk9" />
-  <project path="hardware/qcom-caf/sm8150-common/display" name="PixelExperience/hardware_qcom-caf_sm8150-common_display" remote="dblenk9" />
-  <project path="hardware/qcom-caf/sm8150-common/gps" name="PixelExperience/hardware_qcom-caf_sm8150-common_gps" remote="dblenk9" />
-  <project path="hardware/qcom-caf/sm8150-common/media" name="PixelExperience/hardware_qcom-caf_sm8150-common_media" remote="dblenk9" />
+  <project path="hardware/qcom-caf/sm8150-common/audio" name="PixelExperience/hardware_qcom-caf_sm8150-common_audio" remote="dblenk9" revision="thirteen" />
+  <project path="hardware/qcom-caf/sm8150-common/display" name="PixelExperience/hardware_qcom-caf_sm8150-common_display" remote="dblenk9" revision="thirteen" />
+  <project path="hardware/qcom-caf/sm8150-common/gps" name="PixelExperience/hardware_qcom-caf_sm8150-common_gps" remote="dblenk9" revision="thirteen" />
+  <project path="hardware/qcom-caf/sm8150-common/media" name="PixelExperience/hardware_qcom-caf_sm8150-common_media" remote="dblenk9" revision="thirteen" />
 
   <!-- < QCOM Common > -->
   <project path="device/qcom/common" name="clo-project-mojito/device_qcom_common" remote="dblenk9" revision="lineage-20" />
